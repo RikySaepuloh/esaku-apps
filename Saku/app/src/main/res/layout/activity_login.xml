@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/esaku_square" 
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:inputType="text"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/text_field_background"
+        android:layout_marginTop="45dp"
+        android:hint="email or username"
+        android:textSize="12dp"
+        android:paddingLeft="15dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:shadowColor="#000000"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@id/email"
+        android:layout_marginTop="2dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="293dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/text_field_background"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textSize="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColorHighlight="#000000"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:layout_marginTop="0dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_masuk"
+        android:layout_width="293dp"
+        android:layout_height="35dp"
+        android:text="Masuk"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:layout_below="@id/input_layout"
+        android:background="@drawable/button_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
+</RelativeLayout>

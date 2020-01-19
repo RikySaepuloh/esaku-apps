@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    android:padding="40dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textAlignment="center"
+        android:text="Jika memulai kelas maka anda setuju kelas sebelumnya selesai"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="20dp"
+        >
+        <TextView
+            android:id="@+id/btn_mulai_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginRight="20dp"
+            android:text="Mulai"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:background="#E8E8E8"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/btn_batal_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="20dp"
+            android:text="Batal"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

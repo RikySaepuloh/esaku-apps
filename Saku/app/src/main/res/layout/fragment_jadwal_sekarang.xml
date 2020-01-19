@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/hariTanggal"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/hari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selasa"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31/12/2019"
+            android:fontFamily="@font/sf_pro_text_regular"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RV_jadwal_sekarang"
+        android:layout_below="@+id/hariTanggal"
+        android:scrollbars="vertical"/>
+
+
+
+</RelativeLayout>

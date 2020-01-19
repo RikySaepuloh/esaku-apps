@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_jadwal_hari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabIndicatorFullWidth="false">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_senin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senin"/>
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_selasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selasa"/>
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_jadwal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tab_jadwal_hari"/>
+
+
+</RelativeLayout>
