@@ -10,6 +10,7 @@ import com.dreamlight.saku.ui.home.HomeFragment;
 import com.dreamlight.saku.ui.jadwal_sekarang.JadwalSekarangFragment;
 
 public class JadwalViewPagerAdapter extends FragmentPagerAdapter {
+
     public JadwalViewPagerAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -44,17 +45,17 @@ public class JadwalViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new JadwalHariFragment("Bahasa Indonesia");
+                return new JadwalHariFragment("1");
             case 1:
-                return  new JadwalHariFragment("Matematika");
+                return  new JadwalHariFragment("2");
             case 2:
-                return  new JadwalHariFragment("Bahasa Inggris");
+                return  new JadwalHariFragment("3");
             case 3:
-                return  new JadwalHariFragment("Kimia");
+                return  new JadwalHariFragment("4");
             case 4:
-                return  new JadwalHariFragment("Biologi");
+                return  new JadwalHariFragment("5");
             case 5:
-                return  new JadwalHariFragment("Fisika");
+                return  new JadwalHariFragment("6");
         }
         return null;
     }
@@ -62,5 +63,9 @@ public class JadwalViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return 6;
+    }
+
+    void getJadwal(){
+
     }
 }

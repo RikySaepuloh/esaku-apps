@@ -47,7 +47,7 @@
                 android:layout_marginRight="10dp"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/pesan_list_tgl"
+                    android:id="@+id/absen_kelas_list_tgl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/pesan_list_jam"
+                    android:id="@+id/absen_kelas_list_jam"
                     android:text="10:39"
                     android:textSize="11dp"
                     android:fontFamily="@font/sf_pro_text_regular"/>

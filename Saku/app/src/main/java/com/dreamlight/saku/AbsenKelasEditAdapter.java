@@ -40,21 +40,21 @@ public class AbsenKelasEditAdapter extends RecyclerView.Adapter<AbsenKelasEditAd
         ItemEditAbsenKelas item = mList.get(position);
         holder.nama_siswa.setText(item.getNama_siswa());
         holder.nis_siswa.setText(item.getNis_siswa());
-        if(item.getKeterangan_siswa() == "Sakit"){
+        if(item.getKeterangan_siswa() == "sakit"){
             holder.ijin_btn.setBackgroundResource(R.drawable.hadir_ket_background);
             holder.ijin_btn.setTextColor(Color.GRAY);
             holder.alpha_btn.setBackgroundResource(R.drawable.hadir_ket_background);
             holder.alpha_btn.setTextColor(Color.GRAY);
             holder.sakit_btn.setBackgroundResource(R.drawable.sakit_background);
             holder.sakit_btn.setTextColor(Color.WHITE);
-        }else if(item.getKeterangan_siswa() == "Ijin"){
+        }else if(item.getKeterangan_siswa() == "ijin"){
             holder.alpha_btn.setBackgroundResource(R.drawable.hadir_ket_background);
             holder.alpha_btn.setTextColor(Color.GRAY);
             holder.sakit_btn.setBackgroundResource(R.drawable.hadir_ket_background);
             holder.sakit_btn.setTextColor(Color.GRAY);
             holder.ijin_btn.setBackgroundResource(R.drawable.ijin_background);
             holder.ijin_btn.setTextColor(Color.WHITE);
-        }else if(item.getKeterangan_siswa() == "Alpha"){
+        }else if(item.getKeterangan_siswa() == "alpa"){
             holder.sakit_btn.setBackgroundResource(R.drawable.hadir_ket_background);
             holder.sakit_btn.setTextColor(Color.GRAY);
             holder.ijin_btn.setBackgroundResource(R.drawable.hadir_ket_background);

@@ -35,6 +35,12 @@
         android:id="@+id/RV_jadwal_sekarang"
         android:layout_below="@+id/hariTanggal"
         android:scrollbars="vertical"/>
+    <ProgressBar
+        android:id="@+id/progres_jadwal_sekarang"
+        android:layout_below="@id/hariTanggal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 

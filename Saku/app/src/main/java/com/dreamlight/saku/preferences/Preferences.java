@@ -31,6 +31,9 @@ public class Preferences {
     private String namaPP="nama_pp";
     private String dash="dash";
     private String kodeBidang="kode_bidang";
+    private String date="2021-02-05";
+    private String kelas="kelas";
+    private String jam="jam";
     Context context;
 
     SharedPreferences sp;
@@ -161,7 +164,22 @@ public class Preferences {
         spEditor.putBoolean(isLogedIn, value);
         spEditor.commit();
     }
+    public void setDate(String value){
+        spEditor.putString(date,value);
+        spEditor.commit();
+    }
+    public void setJam(String value){
+        spEditor.putString(jam,value);
+        spEditor.commit();
+    }
+    public void setKelas(String value){
+        spEditor.putString(kelas,value);
+        spEditor.commit();
+    }
 
+    public String getDate() { return  sp.getString(date,"");}
+    public String getJam() { return  sp.getString(jam,"");}
+    public String getKelas() { return sp.getString(kelas,"");}
     public String getUserLog() {
         return sp.getString(userLog, "N/A");
     }

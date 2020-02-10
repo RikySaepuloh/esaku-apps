@@ -64,7 +64,7 @@ public class Login extends AppCompatActivity {
 //                Intent i = new Intent(Login.this, bottom_navigation.class);
 //                startActivity(i);
                     Dialogs();
-                    Login(email.getText().toString(),password.getText().toString(),namapp.getText().toString());
+                    Login(email.getText().toString(),password.getText().toString(),"YSPTE05");
             }
         });
 

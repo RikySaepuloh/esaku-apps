@@ -17,12 +17,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dreamlight.saku.Item_Jadwal_Sekarang;
 import com.dreamlight.saku.R;
+import com.dreamlight.saku.model.JadwalSekarang.JadwalSekarangModel;
 
 import java.util.ArrayList;
 
 public class JadwalSekarangAdapter extends RecyclerView.Adapter<JadwalSekarangAdapter.JadwalSekarangViewHolder> {
 
-    private ArrayList<Item_Jadwal_Sekarang> mJadwalSekarangList;
+    private ArrayList<JadwalSekarangModel> mJadwalSekarangList;
     private OnItemClickListener mListener;
     public interface OnItemClickListener{
         void onMulaiClick(int position);
@@ -57,12 +58,17 @@ public class JadwalSekarangAdapter extends RecyclerView.Adapter<JadwalSekarangAd
                             listener.onMulaiClick(position);
                         }
                     }
+//                    mImageView.setImageResource(R.drawable.ic_aktiv_mengajar);
+//                    status.setText("Aktif");
+//                    nama_kelas.setTextColor(Color.WHITE);
+//                    jam.setTextColor(Color.WHITE);
+//                    headCard.setBackgroundColor(Color.parseColor("#007AFF"));
                 }
             });
         }
     }
 
-    public JadwalSekarangAdapter(ArrayList<Item_Jadwal_Sekarang> JadwalSekarangList){
+    public JadwalSekarangAdapter(ArrayList<JadwalSekarangModel> JadwalSekarangList){
         mJadwalSekarangList = JadwalSekarangList;
     }
 
@@ -76,10 +82,10 @@ public class JadwalSekarangAdapter extends RecyclerView.Adapter<JadwalSekarangAd
 
     @Override
     public void onBindViewHolder(@NonNull JadwalSekarangViewHolder holder, int position) {
-        Item_Jadwal_Sekarang items = mJadwalSekarangList.get(position);
-        holder.nama_kelas.setText(items.getNama_kelas());
-        holder.jam.setText(items.getJam());
-        holder.matapelajaran.setText(items.getMatapelajaran());
+        JadwalSekarangModel items = mJadwalSekarangList.get(position);
+        holder.nama_kelas.setText(items.getKode_kelas());
+        holder.jam.setText(items.getJam1().substring(0,5)+" - "+items.getJam2().substring(0,5));
+        holder.matapelajaran.setText(items.getMatpel());
         holder.status.setText(items.getStatus());
         holder.btnMulai.setVisibility(View.GONE);
         if(items.getStatus() == "Tidak Hadir"){
@@ -90,18 +96,19 @@ public class JadwalSekarangAdapter extends RecyclerView.Adapter<JadwalSekarangAd
             holder.mImageView.setImageResource(R.drawable.ic_selesai);
             holder.status.setText(items.getStatus());
             holder.status.setTextColor(Color.parseColor("#007AFF"));
-        }else if(items.getStatus() == "Belum dimulai"){
-            holder.mImageView.setImageResource(R.drawable.ic_belum_dimulai);
-            holder.status.setText(items.getStatus());
-            holder.status.setTextColor(Color.parseColor("#607D8B"));
-            holder.btnMulai.setVisibility(View.VISIBLE);
-        }else{
+        }else if(items.getStatus() == "Aktif Mengajar"){
             holder.mImageView.setImageResource(R.drawable.ic_aktiv_mengajar);
             holder.status.setText(items.getStatus());
             holder.nama_kelas.setTextColor(Color.WHITE);
             holder.jam.setTextColor(Color.WHITE);
             holder.headCard.setBackgroundColor(Color.parseColor("#007AFF"));
+
+        }else{
             holder.status.setTextColor(Color.parseColor("#4CD964"));
+            holder.mImageView.setImageResource(R.drawable.ic_belum_dimulai);
+            holder.status.setText("Belum Dimulai");
+            holder.status.setTextColor(Color.parseColor("#607D8B"));
+            holder.btnMulai.setVisibility(View.VISIBLE);
         }
     }
 
